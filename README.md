@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🗳️ Decentralized Voting DApp (Sepolia)
 
 A full-stack **Blockchain-based Voting Application** built using **React + Ethereum (Sepolia Testnet)** that enables secure, transparent, and tamper-proof voting.
