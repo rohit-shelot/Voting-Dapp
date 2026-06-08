@@ -1,6 +1,6 @@
-export const CONTRACT_ADDRESS = "Your_Contract_Address";
+export const CONTRACT_ADDRESS = import.meta.env.VITE_CONTRACT_ADDRESS || "Your_MST_Testnet_Contract_Address";
 
-export const SEPOLIA_CHAIN_ID = "0xaa36a7"; 
+export const MST_CHAIN_ID = import.meta.env.VITE_CHAIN_ID || "0x5752035"; 
 
 export const ABI = [
   { "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },

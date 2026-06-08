@@ -306,7 +306,7 @@ export default function App() {
   const sortedCands = [...candidates].sort((a, b) => b.votes - a.votes)
 
   const loaderLabelMap = {
-    connectWallet: 'Connecting wallet to Sepolia...',
+    connectWallet: 'Connecting wallet to MST Blockchain Testnet...', 
     addCandidate: 'Adding candidate on-chain...',
     addVoter: 'Registering voter on-chain...',
     startVoting: 'Starting voting session...',
@@ -328,12 +328,12 @@ export default function App() {
           </div>
           <h1 style={{ fontSize: 22, fontWeight: 700, marginBottom: 8, color: 'var(--text-1)' }}>Voting DApp</h1>
           <p style={{ fontSize: 14, color: 'var(--text-2)', marginBottom: 24, lineHeight: 1.6 }}>
-            Decentralized voting on Sepolia testnet.<br />Connect your wallet to participate.
+            Decentralized voting on MST Blockchain Testnet.<br />Connect your wallet to participate.
           </p>
           <Btn onClick={connectWallet} disabled={loading} bg="#185FA5" color="#fff" style={{ fontSize: 15, padding: '10px 32px' }}>
             Connect MetaMask
           </Btn>
-          <p style={{ fontSize: 11, color: 'var(--text-2)', marginTop: 12 }}>Sepolia testnet required</p>
+          <p style={{ fontSize: 11, color: 'var(--text-2)', marginTop: 12 }}>MST Blockchain Testnet required</p>
           <p style={{ fontSize: 10, color: 'var(--text-2)', marginTop: 4, fontFamily: 'monospace' }}>
             {CONTRACT_ADDRESS}
           </p>
@@ -351,7 +351,7 @@ export default function App() {
             <div>
               <h1 style={{ fontSize: 20, fontWeight: 700, color: 'var(--text-1)' }}>Voting DApp</h1>
               <p style={{ fontSize: 11, color: 'var(--text-2)', marginTop: 3, fontFamily: 'var(--font-mono)' }}>
-                {CONTRACT_ADDRESS} · Sepolia
+                {CONTRACT_ADDRESS} · MST Testnet
               </p>
             </div>
             <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center' }}>

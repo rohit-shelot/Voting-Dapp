@@ -16,7 +16,7 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "description": "A React + ethers.js DApp for the Voting smart contract deployed on Sepolia.",
+  "description": "A React + ethers.js DApp for the Voting smart contract deployed on MST Blockchain Testnet.",
   "main": "vite.config.js",
   "keywords": [],
   "author": "",

@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { ethers } from "ethers";
-import { ABI, CONTRACT_ADDRESS, SEPOLIA_CHAIN_ID } from "./contract";
+import { ABI, CONTRACT_ADDRESS, MST_CHAIN_ID } from "./contract";
 
 export function useVoting() {
   const [contract, setContract] = useState(null);
@@ -113,7 +113,7 @@ const connectWallet = useCallback(async () => {
     try {
       await window.ethereum.request({
         method: "wallet_switchEthereumChain",
-        params: [{ chainId: SEPOLIA_CHAIN_ID }],
+        params: [{ chainId: MST_CHAIN_ID }],
       });
     } catch (error) {
       if (error.code === 4902) {
@@ -121,15 +121,15 @@ const connectWallet = useCallback(async () => {
           method: "wallet_addEthereumChain",
           params: [
             {
-              chainId: SEPOLIA_CHAIN_ID,
-              chainName: "Sepolia Test Network",
-              rpcUrls: ["https://rpc.sepolia.org"],
+              chainId: MST_CHAIN_ID,
+              chainName: "MST Blockchain Testnet",
+              rpcUrls: ["https://testnetrpc.mstblockchain.com"],
               nativeCurrency: {
-                name: "Sepolia ETH",
-                symbol: "ETH",
+                name: "MST",
+                symbol: "MST",
                 decimals: 18,
               },
-              blockExplorerUrls: ["https://sepolia.etherscan.io"],
+              blockExplorerUrls: ["https://testnet.mstscan.com"],
             },
           ],
         });
