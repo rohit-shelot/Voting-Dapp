@@ -1,97 +1,31 @@
-# 🗳️ Decentralized Voting DApp (Sepolia)
+# Decentralized Voting DApp (MST Testnet)
 
-A full-stack **Blockchain-based Voting Application** built using **React + Ethereum (Sepolia Testnet)** that enables secure, transparent, and tamper-proof voting.
+This project is a React + ethers.js voting dapp prepared for deployment on MST Testnet instead of Ethereum Sepolia.
 
-This project demonstrates how real-world voting systems can be implemented using **smart contracts**, ensuring fairness and removing reliance on centralized authorities.
+## Network Details
 
----
+- Network: `MST Testnet`
+- Chain ID: `91562037`
+- Chain ID (hex): `0x5752035`
+- RPC URL: `https://testnetrpc.mstblockchain.com`
+- Explorer: `https://testnet.mstscan.com`
+- Faucet: `https://faucet.mstblockchain.com`
 
-## 🚀 Features
+## Deploy In Remix IDE
 
-### 👤 User Features
-- 🔐 Connect wallet using MetaMask  
-- 👀 View all registered candidates  
-- 🗳️ Vote for a candidate (**only once per round**)  
-- 📡 See **live vote updates**  
-- 📊 Track voting status *(Not Started / Active / Ended)*  
-- 📈 View vote distribution via interactive chart  
+1. Open [contracts/Voting.sol](/d:/Decentra%20Vote%20Final/Voting-Dapp/contracts/Voting.sol).
+2. Compile it with Solidity `0.8.20`.
+3. In MetaMask, add MST Testnet using the network details above.
+4. Switch MetaMask to MST Testnet and get test tokens from the faucet.
+5. In Remix, go to `Deploy & Run Transactions`.
+6. Choose `Injected Provider - MetaMask`.
+7. Deploy the `Voting` contract.
+8. Copy the deployed contract address.
+9. Replace `Your_MST_Testnet_Contract_Address` in [src/contract.js](/d:/Decentra%20Vote%20Final/Voting-Dapp/src/contract.js).
+10. Start the frontend with `npm run dev`.
 
-### 🛠️ Admin (Owner) Features
-- ➕ Add candidates *(before voting starts)*  
-- 👥 Register voters  
-- ▶️ Start voting session  
-- ⏹️ End voting session  
-- 🔄 Reset system for a new voting round  
+## Frontend Notes
 
----
-
-## 🔐 Smart Contract Capabilities
-
-- ✅ One vote per registered voter  
-- 👑 Only owner controls voting lifecycle  
-- 🔍 Transparent vote counting  
-- 🏆 Automatic winner calculation  
-- ⚖️ Tie detection logic  
-- 🔁 Multiple voting rounds support  
-
----
-
-## 📊 UI Highlights
-
-- 🎨 Clean and modern dashboard  
-- ⚡ Real-time vote tally  
-- 🍩 Donut chart visualization  
-- 📜 Transaction log viewer  
-- 🏷️ Status badges for better UX  
-- 📱 Fully responsive design  
-
----
-
-## ⚙️ Tech Stack
-
-### 🖥️ Frontend
-- React.js  
-- Custom Hooks (`useVoting`)  
-- Inline CSS styling  
-
-### ⛓️ Blockchain
-- Solidity Smart Contract  
-- Ethereum Sepolia Testnet  
-- MetaMask Wallet Integration  
-- Ethers.js / Web3  
-
----
-
-## 🔗 Smart Contract Details
-
-- 🌐 Network: **Sepolia Testnet**  
-- 🆔 Chain ID: `0xaa36a7`  
-- 📍 Contract Address: `Your_Contract_Address`  
-
----
-
-## 🧠 How It Works
-
-1. 🏗️ Owner deploys the smart contract  
-2. 👥 Owner registers candidates and voters  
-3. ▶️ Voting session is started  
-4. 🗳️ Registered users cast their vote  
-5. ⛓️ Votes are stored on blockchain  
-6. ⏹️ Owner ends voting  
-7. 🏆 System calculates winner automatically  
-8. 🔄 New round can be started by resetting state  
-
----
-
-## 📦 Core Smart Contract Functions
-
-```solidity
-addCandidate(address)
-addVoter(address)
-startVoting()
-endVoting()
-resetVoting()
-vote(address)
-getWinner()
-getCandidates()
-getVoters()
+- The app now asks MetaMask to switch to MST Testnet automatically.
+- If MetaMask does not know the network yet, the app adds it with the correct RPC, explorer, and currency settings.
+- You still need to deploy your own contract on MST Testnet and paste that deployed address into `src/contract.js`.
