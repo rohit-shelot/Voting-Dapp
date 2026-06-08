@@ -326,7 +326,7 @@ export default function App() {
           <div style={{ width: 60, height: 60, borderRadius: 16, background: '#185FA5', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', fontSize: 28 }}>
             V
           </div>
-          <h1 style={{ fontSize: 22, fontWeight: 700, marginBottom: 8, color: 'var(--text-1)' }}>Voting DApp</h1>
+          <h1 style={{ fontSize: 22, fontWeight: 700, marginBottom: 8, color: 'var(--text-1)' }}>MST Vote</h1>
           <p style={{ fontSize: 14, color: 'var(--text-2)', marginBottom: 24, lineHeight: 1.6 }}>
             Decentralized voting on MST Blockchain Testnet.<br />Connect your wallet to participate.
           </p>
@@ -349,7 +349,7 @@ export default function App() {
         <div style={{ borderBottom: '0.5px solid var(--border)', paddingBottom: '1rem', marginBottom: '1.5rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 8 }}>
             <div>
-              <h1 style={{ fontSize: 20, fontWeight: 700, color: 'var(--text-1)' }}>Voting DApp</h1>
+              <h1 style={{ fontSize: 20, fontWeight: 700, color: 'var(--text-1)' }}>MST Vote</h1>
               <p style={{ fontSize: 11, color: 'var(--text-2)', marginTop: 3, fontFamily: 'var(--font-mono)' }}>
                 {CONTRACT_ADDRESS} · MST Testnet
               </p>
